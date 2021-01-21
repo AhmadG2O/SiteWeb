@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Page de {{Prenom}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"  ></script>
+<style>       
+      ul{
+        list-style-type: none;
+      }
+      
+      #global {
+   overflow:auto;
+}
+#gauche {
+   float:left;
+   width:35%;
+}
+#milieu {
+   float:left;
+   width:5%;
+}
+#trois{
+    float:left;
+    width:20%;
+}
+
+#globalité {
+   overflow:auto;
+}
+#gaucher {
+   float:left;
+   width:25%;
+}
+#deuxiemer {
+   float:left;
+   width:10%;
+}
+#milieur {
+   float:left;
+   width:5%;
+}
+#troisr{
+    float:left;
+    width:20%;
+}
+#valeur {
+   float:right;
+   width:40%;
+}
+#globalit{
+   overflow:auto;
+}
+#gauchere {
+   float:left;
+   width:35%;
+}
+#milieure {
+   float:left;
+   width:5%;
+}
+#troisre {
+    float:left;
+    width:20%;
+}
+#gauchet {
+   float:left;
+   width:35%;
+}
+#milieut {
+   float:left;
+   width:10%;
+}
+#troist{
+    float:left;
+    width:20%;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Accueil</h2>
+  <p>Veuillez cliquer sur les pannels ci-dessous pour accéder aux différentes catégories.</p>
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="pill" href="#home">Informations</a></li>
+    <li><a data-toggle="pill" href="#menu1">Analyses</a></li>
+    <li><a data-toggle="pill" href="#menu2">Liens utiles</a></li>
+    <li><a data-toggle="pill" href="#menu3">Compte</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3><u>Vos informations</u></h3>
+      <hr/><b><h3>État Civil</b></h3><hr/>
+	  <p>Prénom: {{Prenom}} </p>
+      <p>Nom: {{Nom}} </p>
+      <p>Âge: {{Age}}</p>
+      <p>Sexe: {{Sexe}} </p>
+	  <hr/><h3><b>Adresse</b></h3><hr/>
+      <p>Voirie: {{Adresse}} </p>
+      <p>Code Postal: {{Code_Postal}}</p>
+      <p>Ville: {{Ville}}</p>
+	  <hr/><h3><b>Informations complémentaires</b></h3><hr/>
+      <p>Adresse mail: {{Adresse_Mail}}</p>
+      <p>Numéro de téléphone: {{Num_tel}} </p>
+      <p>Numéro de sécurité sociale: {{Num_SS}} </p>
+    </div>
+    
+    
+ 
+    
+    <div id="menu1" class="tab-pane fade">
+      <h3><u>Analyses</u></h3><hr/>
+      
+      <p>
+	   <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a data-toggle="pill" href="#hemato"><b><h4>HEMATOLOGIE</b></h4></a></li>
+    <li><a data-toggle="pill" href="#biochimie"><b><h4>BIOCHIMIE</b></h4></a></li>
+    <li><a data-toggle="pill" href="#immu"><b><h4>IMMUNO-ENZYMOLOGIE</b></h4></a></li>
+    <li><a data-toggle="pill" href="#pdf"><b><h4>COMPTE RENDU PDF</b></h4></a></li>
+  </ul>
+       <hr/>
+	   <div class="tab-content">
+    <div id="hemato" class="tab-pane fade in active">
+	   
+    <div id="valeur" style="line-height: 1.5; width: 1;"><font size="1"><b>Valeur de référence</font></b></div>
+
+       <h3><b>HEMOGRAMME</h3></b>
+       <div style="line-height: 0; width: 1;"><font size="1"><b>Automate Sysmex Cytomètre de Flux et impédance</font></b></div>
+       <div style="line-height: 3; width: 1;"><font size="5">NUMERATION GLOBULAIRE</font></div>
+       
+       <div id="global">
+    <div id="gauche">
+       <ul>
+      <li>Leucocytes</li>
+      <li>Hématies</li>
+      <li>Hémoglobine</li>
+      <li>Hématocrite</li>
+      <li>V.G.M.</li>
+      <li>C.C.M.H.</li>
+      <li>T.C.M.H.</li>
+      <li>R.D.W.</li>
+    </ul> 
+    </div>
+                  <div id="milieu">
+                    <ul>
+                      <li>{{leuco}}</li>
+                      <li>{{hemati}}</li>
+                      <li>{{hemo}}</li>
+                      <li>{{hemato}}</li>
+                      <li>{{vgm}}</li>
+                      <li>{{ccmh}}</li>
+                      <li>{{tcmh}}</li>
+                      <li>{{rdw}}</li>
+                    </ul>
+                  </div>
+                
+        
+                <div id="trois">
+                    <ul>
+                      <li>G/l</li>
+                      <li>T/l</li>
+                      <li>g/dl</li>
+                      <li>%</li>
+                      <li>fL</li>
+                      <li>g/dl</li>
+                      <li>pg</li>
+                      <li>%</li>
+                    </ul>
+                  </div>
+                  
+                  <div id="dernier">
+                    <ul>
+                      <li><div style="line-height: 1.5; width: 1;"><font size="1"><b>4,02 à 11,42</font></b></div></li>
+                    <li><div style="line-height: 1.3; width: 1;"><font size="1"><b>4,01 à 5,19</font></b></div></li>
+                 <li><div style="line-height: 1.6; width: 1;"><font size="1"><b>11,5 à 14,9</font></b></div></li>
+                <li><div style="line-height: 1.3; width: 1;"><font size="1"><b>34,4 à 43,9</font></b></div></li>
+                <li><div style="line-height: 1.36; width: 1;"><font size="1"><b>75 à 94</font></b></div></li>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>31,9 à 35,8</font></b></div></li>
+                    <li><div style="line-height: 1.65; width: 1;"><font size="1"><b>24,4 à 32,1</font></b></div></li>
+                    <li><div style="line-height: 1.2; width: 1;"><font size="1"><b>11,0 à 16,0</font></b></div></li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+               
+               <div style="line-height: 3; width: 1;"><font size="5">FORMULE SANGUINE</font></div>
+       
+      <div id="globalité">
+    <div id="gaucher">
+       <ul>
+      <li>Polynucléaires neutrophiles</li>
+      <li>Polynucléaires éosinophiles</li>
+      <li>Polynucléaires basophiles</li>
+      <li>Lymphocytes</li>
+      <li>Monocytes</li>
+    </ul> 
+    </div>
+    
+                    <div id="deuxiemer">
+                    <ul>
+                      <li>{{polynp}}%</li>
+                      <li>{{polyep}}%</li>
+                      <li>{{polybp}}%</li>
+                      <li>{{lympp}}%</li>
+                      <li>{{monop}}%</li>
+                     
+                    </ul>
+                  </div>
+                  
+                  <div id="milieur">
+                    <ul>
+                      <li>{{polyn}}</li>
+                      <li>{{polye}}</li>
+                      <li>{{polyb}}</li>
+                      <li>{{lymp}}</li>
+                      <li>{{mono}}</li>
+
+                    </ul>
+                  </div>
+                
+        
+                <div id="troisr">
+                    <ul>
+                      <li>G/l</li>
+                      <li>G/l</li>
+                      <li>G/l</li>
+                      <li>G/l</li>
+                      <li>G/l</li>
+                      
+                    </ul>
+                  </div>
+                  
+                  <div id="dernierr">
+                    <ul>
+                    <li><div style="line-height: 1.25; width: 1;"><font size="1"><b>1,75 à 7,50</font></b></div></li>
+                    <li><div style="line-height: 1.4; width: 1;"><font size="1"><b>0,04 à 0,55</font></b></div></li>
+                    <li><div style="line-height: 1.5; width: 1;"><font size="1"><b>inf. à 0,09</font></b></div></li>
+                    <li><div style="line-height: 1.6; width: 1;"><font size="1"><b>1,37 à 3,97</font></b></div></li>
+                    <li><div style="line-height: 1.5; width: 1;"><font size="1"><b>0,20 à 0,80</font></b></div></li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+                  
+                       <div style="line-height: 3; width: 1;"><font size="5">NUMERATION DES PLAQUETTES</font></div>
+                       
+                        <div id="globalité">
+    <div id="gauchere">
+       <ul>
+      <li>Numération des plaquettes</li>
+    </ul> 
+    </div>
+                  
+                  <div id="milieure">
+                    <ul>
+                      <li>{{numplaq}}</li>
+                    </ul>
+                  </div>
+                
+        
+                <div id="troisre">
+                    <ul>
+                      <li>G/l</li>                      
+                    </ul>
+                  </div>
+                  
+                  <div id="dernierre">
+                    <ul>
+                    <li><div style="line-height: 1.25; width: 1;"><font size="1"><b>150 à 400</font></b></div></li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+                       
+                       
+           </div>
+    <div id="biochimie" class="tab-pane fade">
+ <div id="valeur" style="line-height: 1.5; width: 1;"><font size="1"><b>Valeur de référence</font></b></div>
+
+       <h3><b>BIOCHIMIE SANGUINE</h3></b>
+       
+       <div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Glycémie</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Technique de référence à l'hexokinase</font></b></div></li>
+
+      <li>Créatine</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Test colorimétrique enzymatique Roche</font></b></div></li>
+
+      <li>Débit de Filtration Glomérulaire (selon la formule MDRD)</li>
+      <li>Débit de Filtration Glomérulaire (selon la formule CKD-EPI)</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+                      <li>{{gly}}</li>
+                      <li>{{glym}}</li>
+                      <li>{{crea}}</li>
+                      <li>{{creat}}</li>
+                      <li>{{mdrd}}</li>
+                      <li>{{ckd}}</li>
+                    </ul>
+                  </div>
+                
+        
+                <div id="troist">
+                    <ul>
+                      <li>g/L</li>
+                      <li>mmol/L</li>
+                      <li>mg/L</li>
+                      <li>µmol/L</li>
+                      <li>ml/min</li>
+                      <li>ml/min</li>
+                    </ul>
+                  </div>
+                  
+                  <div id="derniert">
+                    <ul>
+                      <li><div style="line-height: 1.5; width: 1;"><font size="1"><b>0,74 à 1,06</font></b></div></li>
+                    <li><div style="line-height: 1.3; width: 1;"><font size="1"><b>4,11 à 5,89</font></b></div></li>
+                 <li><div style="line-height: 1.6; width: 1;"><font size="1"><b>5,1 à 9,5</font></b></div></li>
+                <li><div style="line-height: 1.3; width: 1;"><font size="1"><b>45 à 84</font></b></div></li>
+                <li><div style="line-height: 1.36; width: 1;"><font size="1"><b> >60ml/min/1,73m2</font></b></div></li>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>>60ml/min/1,73m2 </font></b></div></li>
+                    </ul>
+                  </div>
+				  </div>
+				  
+	<h3><b>BILAN LIPIDIQUE</h3></b>
+
+       
+       <div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Aspect</li>
+      <li>Cholestérol Total</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Méthode colorimétrique enzymatique</font></b></div></li>
+      <li>Cholestérol H.D.L.</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Test colorimétrique enzymatique Roche</font></b></div></li>
+	  <li><div style="line-height: 2.7; width: 5;">Calcul du Cholestérol L.D.L.</div></li>
+	  <li>Triglyérides</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Test colorimétrique enzymatique Roche</font></b></div></li>
+	  <li>A.S.A.T. ou T.G.O.</li>
+	  <li>A.L.A.T. ou T.G.P.</li>
+	  <li>Gamma-glutamyl transférase</li>
+	  <li>Phosphatases alcalines</li>
+	  <li><div style="line-height: 1.5; width: 5;"><font size="0"><b>Test colorimétrique Roche</font></b></div></li>
+      
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{aspect}}</li>
+                      <li>{{chotot}}</li>
+                      <li>{{chotott}}</li>
+                      <li>{{chohdl}}</li>
+                      <li>{{chohdll}}</li>
+                      <li>{{ccholdl}}</li>
+                      <li>{{cchodll}}</li>
+					  <li>{{triglyc}}</li>
+					  <li>{{triglyce}}</li>
+                      <li>{{asat}}</li>
+                      <li>{{alat}}</li>
+                      <li>{{gamglu}}</li>
+                      <li>{{phospha}}</li>
+                    </ul>
+                  </div>
+        
+                <div id="troist">
+                    <ul>
+					  <li>N/A</li>
+                      <li>g/L</li>
+                      <li>mmol/L</li>
+                      <li>g/L</li>
+                      <li>mmol/L</li>
+                      <li>g/L</li>
+                      <li>mmol/L</li>
+					  <li>g/L</li>
+                      <li>mmol/L</li>
+                      <li>U/L</li>
+                      <li>U/L</li>
+                      <li>U/L</li>
+                      <li>U/L</li>
+                    </ul>
+                  </div>
+				  
+				   <div id="derniert">
+                    <ul>
+					<li><div style="line-height: 1.1; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+					<li><div style="line-height: 1.5; width: 1;"><font size="1"><b> N/A </font></b></div></li>
+                      <li><div style="line-height: 1.5; width: 1;"><font size="1"><b> <1,50 </font></b></div></li>
+                    <li><div style="line-height: 1.3; width: 1;"><font size="1"><b><1,70</font></b></div></li>
+                 <li><div style="line-height: 1.6; width: 1;"><font size="1"><b>10 à 35</font></b></div></li>
+                <li><div style="line-height: 1.3; width: 1;"><font size="1"><b>10 à 35</font></b></div></li>
+                <li><div style="line-height: 1.36; width: 1;"><font size="1"><b>5 à 35</font></b></div></li>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>35 à 104</font></b></div></li>
+                    </ul>
+                  </div>
+				  
+                  </div>
+                  </div>
+   
+    <div id="immu" class="tab-pane fade">
+    <div id="valeur" style="line-height: 1.5; width: 1;"><font size="1"><b>Valeur de référence</font></b></div>
+       <h3><b>HORMONOLOGIE</h3></b>
+   
+<div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>T.S.H. ultra-sensible</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{TSH}}</li>
+                    </ul>
+                  </div>
+                <div id="troist">
+                    <ul>
+					  <li>µUI/mL</li>
+                    </ul>
+                  </div>
+				  
+				   <div id="derniert">
+                    <ul>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>0,51 à 4,30</font></b></div></li>
+                    </ul>
+                  </div>
+
+   </div>
+   <h3><b>SÉROLOGIE</h3></b>
+   
+   <div style="line-height: 1; width: 1;"><font size="4">SÉRODIAGNOSTIC DU HIV</font></div>
+   
+<div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Dépistage VIH 1/2</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{VIH}}</li>
+                    </ul>
+                  </div>
+				  <div id="troist">
+                    <ul>
+					  <li>N/A</li>
+                    </ul>
+                  </div>
+				   <div id="derniert">
+                    <ul>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>N/A</font></b></div></li>
+                    </ul>
+                  </div>
+
+   </div>
+   
+   <h3><b>SÉROLOGIE HÉPATITE B</h3></b>
+   
+   <div style="line-height: 1; width: 1;"><font size="4">ANTIGENE HBS</font></div>
+   
+<div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Index S/CO</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{SCO}}</li>
+                    </ul>
+                  </div>
+               				<div id="troist">
+                    <ul>
+					  <li>N/A</li>
+                    </ul>
+                  </div>  
+				   <div id="derniert">
+                    <ul>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>Seuil de positivité >1</font></b></div></li>
+                    </ul>
+                  </div>
+
+   </div>
+   
+   <div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBS IgG</font></div>
+   
+<div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Taux Ac anti-HBs</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{ACHB}}</li>
+                    </ul>
+                  </div>
+                <div id="troist">
+                    <ul>
+					  <li>UI/L</li>
+                    </ul>
+                  </div>
+				  
+				   <div id="derniert">
+                    <ul>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>Seuil de positivité >=10</font></b></div></li>
+                    </ul>
+                  </div>
+
+   </div>
+   
+   <div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBC Totaux</font></div>
+   
+<div id="global">
+    <div id="gauchet">
+       <ul>
+      <li>Indice E/VS</li>
+    </ul> 
+    </div>
+                  <div id="milieut">
+                    <ul>
+					  <li>{{EVS}}</li>
+                    </ul>
+                  </div>
+       				  <div id="troist">
+                    <ul>
+					  <li>N/A</li>
+                    </ul>
+                  </div>
+				   <div id="derniert">
+                    <ul>
+                    <li><div style="line-height: 1.56; width: 1;"><font size="1"><b>Seuil de positivité >=1</font></b></div></li>
+                    </ul>
+                  </div>
+
+   </div>
+   
+
+</div>
+
+
+   <div id="pdf" class="tab-pane fade">
+      <h3>FICHIER PDF</h3>
+      <p>Vous pouvez télécharger toutes vos analyses sous le format PDF.</p>
+    </div>
+  </div>           
+                  
+    
+    </div>
+    
+    
+    </p>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Liens utiles</h3>
+      <p><h3><b>AFSSAPS</b></h3>
+Agence Française de sécurité sanitaire des produits de santé <a href="http://www.ansm.sante.fr/">http://www.ansm.sante.fr/</a><hr/>
+<h3><b>Ameli</b></h3>
+L’assurance maladie en ligne <a href="http://www.ameli.fr/">http://www.ameli.fr/</a><hr/>
+<h3><b>Biomnis</b></h3>
+Biologie médicale spécialisée <a href="https://www.eurofins-biomnis.com/">https://www.eurofins-biomnis.com/</a><hr/>
+<h3><b>Cofrac</b></h3>
+Instance nationale d’accréditation avec cinq sections gèrent les accréditations, dont celle concernant les laboratoires d’analyses de biologie médicale <a href="http://www.cofrac.fr/">http://www.cofrac.fr/</a><hr/>
+<h3><b>Conseil National de l’Ordre des Médecins</b></h3>
+Information liées à la profession médicale <a href="http://www.conseil-national.medecin.fr/">http://www.conseil-national.medecin.fr/</a></p><hr/>
+    </div>
+	
+	 <div id="menu3" class="tab-pane fade">
+      <h3><u>Compte</u></h3>
+      <p>Vous pouvez mettre à jour vos données ci-dessous. </p>
+	  <form action = "https://eval-heroku.herokuapp.com/patientv2" method = "POST">
+		<hr/><b><h3>État Civil</b></h3><hr/>
+		Prénom: <input type="text" name="Preno" placeholder={{Prenom}} size="30" required/> 		<input type="hidden" readonly name="Vpreno" value={{Prenom}} />
+</br>
+		Nom: <input type="text" name="Nom" placeholder={{Nom}} size="30" required/></br>
+		Âge: <input type="text" name="Age" placeholder={{Age}} size="30" required/></br>
+		Sexe: <input type="text" name="Sexe" placeholder={{Sexe}} size="30" required/></br>
+		<hr/><h3><b>Adresse</b></h3><hr/>
+		Adresse: <input type="text" name="Adresse" placeholder={{Adresse}} size="30" required/></br>
+		Code Postal: <input type="text" name="Code_Postal" placeholder={{Code_Postal}} size="30" required/></br>
+		Ville: <input type="text" name="Ville" placeholder={{Ville}} size="30" required/></br>
+		<hr/><h3><b>Informations complémentaires</b></h3><hr/>
+		Adresse Mail: <input type="text" name="Adresse_Mail" placeholder={{Adresse_Mail}} size="30" required/></br>
+		Numéro de télephone: <input type="text" name="Num_tel" placeholder={{Num_tel}} size="30" required/></br>
+		Numéro de Sécurité Sociale: <input type="text" name="Num_SS" placeholder={{Num_SS}} size="30" required/></br>
+		Mot de passe: <input type="password" name="Pi" placeholder="Mot de passe" size="30" required/></br>
+		<input type="submit" value="Mise à jour" /><br>
+		</form> 
+    </div>
+    
+    
+  </div>
+</div>
+
+</body>
+</html>

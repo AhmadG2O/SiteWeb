@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Page de {{Prenom}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"  ></script>
+<style>       
+      ul{
+        list-style-type: none;
+      }
+      
+      #global {
+   overflow:auto;
+}
+#gauche {
+   float:left;
+   width:35%;
+}
+#milieu {
+   float:left;
+   width:5%;
+}
+#trois{
+    float:left;
+    width:20%;
+}
+
+#globalité {
+   overflow:auto;
+}
+#gaucher {
+   float:left;
+   width:25%;
+}
+#deuxiemer {
+   float:left;
+   width:10%;
+}
+#milieur {
+   float:left;
+   width:5%;
+}
+#troisr{
+    float:left;
+    width:20%;
+}
+#valeur {
+   float:right;
+   width:40%;
+}
+#globalit{
+   overflow:auto;
+}
+#gauchere {
+   float:left;
+   width:35%;
+}
+#milieure {
+   float:left;
+   width:5%;
+}
+#troisre {
+    float:left;
+    width:20%;
+}
+#gauchet {
+   float:left;
+   width:35%;
+}
+#milieut {
+   float:left;
+   width:10%;
+}
+#troist{
+    float:left;
+    width:20%;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Accueil</h2>
+  <p>Veuillez cliquer sur les pannels ci-dessous pour accéder aux différentes catégories.</p>
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="pill" href="#home">Création Patient</a></li>
+    <li><a data-toggle="pill" href="#menu1">Modification Patient</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3><u>Création Patient</u></h3>
+	  <form action = "https://eval-heroku.herokuapp.com/Admin" method = "POST">
+		<hr/><b><h3>État Civil</b></h3><hr/>
+		Prénom: <input type="text" name="CPrenom" placeholder="Prénom" size="30" required/></br> 		
+		Nom: <input type="text" name="CNom" placeholder="Nom" size="30" required/></br>
+		Âge: <input type="text" name="CAge" placeholder="Age" size="30" required/></br>
+		Sexe: <input type="text" name="CSexe" placeholder="Sexe" size="30" required/></br>
+		<hr/><h3><b>Adresse</b></h3><hr/>
+		Adresse: <input type="text" name="CAdresse" placeholder="Adresse" size="30" required/></br>
+		Code Postal: <input type="text" name="CCode_Postal" placeholder="Code Postal" size="30" required/></br>
+		Ville: <input type="text" name="CVille" placeholder="Ville" size="30" required/></br>
+		<hr/><h3><b>Informations complémentaires</b></h3><hr/>
+		Adresse Mail: <input type="text" name="CAdresse_Mail" placeholder="Adresse Mail" size="30" required/></br>
+		Numéro de télephone: <input type="text" name="CNum_tel" placeholder="Numéro de teléphone" size="30" required/></br>
+		Numéro de Sécurité Sociale: <input type="text" name="CNum_SS" placeholder="Numéro de Sécurité Sociale" size="30" required/></br>
+		Mot de passe: <input type="password" name="CPi" placeholder="Mot de passe" size="30" required/></br>
+		<hr/><b><h3>Données Médicales</b></h3><hr/>
+		<ul><h3><b>HEMOGRAMME</h3></b>
+		<ul>
+		<div style="line-height: 3; width: 1;"><font size="5">NUMERATION GLOBULAIRE</font></div>
+		<ul>
+		Leucocytes: <input type="text" name="Cleuco" value="N/A" size="30" required/></br>
+		Hématies: <input type="text" name="Chemati" value="N/A" size="30" required/></br>
+        Hémoglobine: <input type="text" name="Chemo" value="N/A" size="30" required/></br>
+        Hématocrite: <input type="text" name="Chemato" value="N/A" size="30" required/></br>
+        V.G.M.: <input type="text" name="Cvgm" value="N/A" size="30" required/></br>
+        C.C.M.H.: <input type="text" name="Cccmh" value="N/A" size="30" required/></br>
+        T.C.M.H.: <input type="text" name="Ctcmh" value="N/A" size="30" required/></br>
+        R.D.W.: <input type="text" name="Crdw" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 3; width: 1;"><font size="5">FORMULE SANGUINE</font></div>
+		<ul>
+		Polynucléaires neutrophiles (%): <input type="text" name="Cpolynp" value="N/A" size="30" required/></br>
+		Polynucléaires éosinophiles (%): <input type="text" name="Cpolyep" value="N/A" size="30" required/></br>
+        Polynucléaires basophiles (%): <input type="text" name="Cpolybp" value="N/A" size="30" required/></br>
+        Lymphocytes (%): <input type="text" name="Clympp" value="N/A" size="30" required/></br>
+        Monocytes (%): <input type="text" name="Cmonop" value="N/A" size="30" required/></br>
+		Polynucléaires neutrophiles: <input type="text" name="Cpolyn" value="N/A" size="30" required/></br>
+		Polynucléaires éosinophiles: <input type="text" name="Cpolye" value="N/A" size="30" required/></br>
+        Polynucléaires basophiles: <input type="text" name="Cpolyb" value="N/A" size="30" required/></br>
+        Lymphocytes: <input type="text" name="Clymp" value="N/A" size="30" required/></br>
+        Monocytes: <input type="text" name="Cmono" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 3; width: 1;"><font size="5">NUMERATION DES PLAQUETTES</font></div>
+		<ul>
+		Numération des plaquettes: <input type="text" name="Cnumplaq" value="N/A" size="30" required/></br>
+		</ul>
+		</ul>
+		<h3><b>BIOCHIMIE SANGUINE</h3></b>
+		<ul>
+		Glycémie: <input type="text" name="Cgly" value="N/A" size="30" required/></br>
+		Glycémie (mmol/L): <input type="text" name="Cglym" value="N/A" size="30" required/></br>
+		Créatine: <input type="text" name="Ccrea" value="N/A" size="30" required/></br>
+		Créatine (µmol/L): <input type="text" name="Ccreat" value="N/A" size="30" required/></br>
+		Débit de Filtration Glomérulaire (selon la formule MDRD): <input type="text" name="Cmdrd" value="N/A" size="30" required/></br>
+        Débit de Filtration Glomérulaire (selon la formule CKD-EPI): <input type="text" name="Cckd" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>BILAN LIPIDIQUE</h3></b>
+		<ul>
+		 Aspect: <input type="text" name="Caspect" value="N/A" size="30" required/></br>
+         Cholestérol Total: <input type="text" name="Cchotot" value="N/A" size="30" required/></br>
+         Cholestérol Total (mmol/L): <input type="text" name="Cchotott" value="N/A" size="30" required/></br>
+		 Cholestérol H.D.L.: <input type="text" name="Cchohdl" value="N/A" size="30" required/></br>
+		 Cholestérol H.D.L. (mmol/L): <input type="text" name="Cchohdll" value="N/A" size="30" required/></br>
+		 Calcul du Choléstérol L.D.L.: <input type="text" name="Cccholdl" value="N/A" size="30" required/></br>
+		 Calcul du Choléstérol L.D.L. (mmol/L): <input type="text" name="Ccchodll" value="N/A" size="30" required/></br>
+		 Triglyérides: <input type="text" name="Ctriglyc" value="N/A" size="30" required/></br>
+		 Triglyérides (mmol/L): <input type="text" name="Ctriglyce" value="N/A" size="30" required/></br>
+		 A.S.A.T. ou T.G.O.: <input type="text" name="Casat" value="N/A" size="30" required/></br>
+	     A.L.A.T. ou T.G.P.: <input type="text" name="Calat" value="N/A" size="30" required/></br>
+	     Gamma-glutamyl transférase: <input type="text" name="Cgamglu" value="N/A" size="30" required/></br>
+	     Phosphatases alcalines: <input type="text" name="Cphospha" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>HORMONOLOGIE</h3></b>
+		<ul>
+		T.S.H. ultra-sensible: <input type="text" name="CTSH" value="N/A" size="30" required/></br>		
+		</ul>
+		<h3><b>SÉROLOGIE</h3></b>
+		<ul>
+		Dépistage VIH 1/2: <input type="text" name="CVIH" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>SÉROLOGIE HÉPATITE B</h3></b>
+		<ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTIGENE HBS</font></div>
+		<ul>
+		Index S/CO: <input type="text" name="CSCO" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBS IgG</font></div>
+		<ul>
+		Taux Ac anti-HBs: <input type="text" name="CACHB" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBC Totaux</font></div>
+		<ul>
+		Indice E/VS: <input type="text" name="CEVS" value="N/A" size="30" required/> 
+		</ul>
+		</ul>
+		</ul>
+		<input type="submit" value="Création" /></br>
+		</form>
+    </div>
+    
+ 
+    
+    <div id="menu1" class="tab-pane fade">
+      <h3><u>Modification Patient</u></h3>
+	  <form action = "https://eval-heroku.herokuapp.com/Modification" method = "POST">
+		Compte: <input type="text" name="entree" placeholder="Compte{{test}}" size="30" required/>
+		<hr/><b><h3>État Civil</b></h3><hr/>
+		Prénom: <input type="text" name="MPrenom" placeholder="Prénom" size="30" required/></br> 		
+		Nom: <input type="text" name="MNom" placeholder="Nom" size="30" required/></br>
+		Âge: <input type="text" name="MAge" placeholder="Age" size="30" required/></br>
+		Sexe: <input type="text" name="MSexe" placeholder="Sexe" size="30" required/></br>
+		<hr/><h3><b>Adresse</b></h3><hr/>
+		Adresse: <input type="text" name="MAdresse" placeholder="Adresse" size="30" required/></br>
+		Code Postal: <input type="text" name="MCode_Postal" placeholder="Code Postal" size="30" required/></br>
+		Ville: <input type="text" name="MVille" placeholder="Ville" size="30" required/></br>
+		<hr/><h3><b>Informations complémentaires</b></h3><hr/>
+		Adresse Mail: <input type="text" name="MAdresse_Mail" placeholder="Adresse Mail" size="30" required/></br>
+		Numéro de télephone: <input type="text" name="MNum_tel" placeholder="Numéro de teléphone" size="30" required/></br>
+		Numéro de Sécurité Sociale: <input type="text" name="MNum_SS" placeholder="Numéro de Sécurité Sociale" size="30" required/></br>
+		Mot de passe: <input type="password" name="MPi" placeholder="Mot de passe" size="30" required/></br>
+		<hr/><b><h3>Données Médicales</b></h3><hr/>
+		<ul><h3><b>HEMOGRAMME</h3></b>
+		<ul>
+		<div style="line-height: 3; width: 1;"><font size="5">NUMERATION GLOBULAIRE</font></div>
+		<ul>
+		Leucocytes: <input type="text" name="Mleuco" value="N/A" size="30" required/></br>
+		Hématies: <input type="text" name="Mhemati" value="N/A" size="30" required/></br>
+        Hémoglobine: <input type="text" name="Mhemo" value="N/A" size="30" required/></br>
+        Hématocrite: <input type="text" name="Mhemato" value="N/A" size="30" required/></br>
+        V.G.M.: <input type="text" name="Mvgm" value="N/A" size="30" required/></br>
+        C.C.M.H.: <input type="text" name="Mccmh" value="N/A" size="30" required/></br>
+        T.C.M.H.: <input type="text" name="Mtcmh" value="N/A" size="30" required/></br>
+        R.D.W.: <input type="text" name="Mrdw" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 3; width: 1;"><font size="5">FORMULE SANGUINE</font></div>
+		<ul>
+		Polynucléaires neutrophiles (%): <input type="text" name="Mpolynp" value="N/A" size="30" required/></br>
+		Polynucléaires éosinophiles (%): <input type="text" name="Mpolyep" value="N/A" size="30" required/></br>
+        Polynucléaires basophiles (%): <input type="text" name="Mpolybp" value="N/A" size="30" required/></br>
+        Lymphocytes (%): <input type="text" name="Mlympp" value="N/A" size="30" required/></br>
+        Monocytes (%): <input type="text" name="Mmonop" value="N/A" size="30" required/></br>
+		Polynucléaires neutrophiles: <input type="text" name="Mpolyn" value="N/A" size="30" required/></br>
+		Polynucléaires éosinophiles: <input type="text" name="Mpolye" value="N/A" size="30" required/></br>
+        Polynucléaires basophiles: <input type="text" name="Mpolyb" value="N/A" size="30" required/></br>
+        Lymphocytes: <input type="text" name="Mlymp" value="N/A" size="30" required/></br>
+        Monocytes: <input type="text" name="Mmono" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 3; width: 1;"><font size="5">NUMERATION DES PLAQUETTES</font></div>
+		<ul>
+		Numération des plaquettes: <input type="text" name="Mnumplaq" value="N/A" size="30" required/></br>
+		</ul>
+		</ul>
+		<h3><b>BIOCHIMIE SANGUINE</h3></b>
+		<ul>
+		Glycémie: <input type="text" name="Mgly" value="N/A" size="30" required/></br>
+		Glycémie (mmol/L): <input type="text" name="Mglym" value="N/A" size="30" required/></br>
+		Créatine: <input type="text" name="Mcrea" value="N/A" size="30" required/></br>
+		Créatine (µmol/L): <input type="text" name="Mcreat" value="N/A" size="30" required/></br>
+		Débit de Filtration Glomérulaire (selon la formule MDRD): <input type="text" name="Mmdrd" value="N/A" size="30" required/></br>
+        Débit de Filtration Glomérulaire (selon la formule CKD-EPI): <input type="text" name="Mckd" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>BILAN LIPIDIQUE</h3></b>
+		<ul>
+		 Aspect: <input type="text" name="Maspect" value="N/A" size="30" required/></br>
+         Cholestérol Total: <input type="text" name="Mchotot" value="N/A" size="30" required/></br>
+         Cholestérol Total (mmol/L): <input type="text" name="Mchotott" value="N/A" size="30" required/></br>
+		 Cholestérol H.D.L.: <input type="text" name="Mchohdl" value="N/A" size="30" required/></br>
+		 Cholestérol H.D.L. (mmol/L): <input type="text" name="Mchohdll" value="N/A" size="30" required/></br>
+		 Calcul du Choléstérol L.D.L.: <input type="text" name="Mccholdl" value="N/A" size="30" required/></br>
+		 Calcul du Choléstérol L.D.L. (mmol/L): <input type="text" name="Mcchodll" value="N/A" size="30" required/></br>
+		 Triglyérides: <input type="text" name="Mtriglyc" value="N/A" size="30" required/></br>
+		 Triglyérides (mmol/L): <input type="text" name="Mtriglyce" value="N/A" size="30" required/></br>
+		 A.S.A.T. ou T.G.O.: <input type="text" name="Masat" value="N/A" size="30" required/></br>
+	     A.L.A.T. ou T.G.P.: <input type="text" name="Malat" value="N/A" size="30" required/></br>
+	     Gamma-glutamyl transférase: <input type="text" name="Mgamglu" value="N/A" size="30" required/></br>
+	     Phosphatases alcalines: <input type="text" name="Mphospha" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>HORMONOLOGIE</h3></b>
+		<ul>
+		T.S.H. ultra-sensible: <input type="text" name="MTSH" value="N/A" size="30" required/></br>		
+		</ul>
+		<h3><b>SÉROLOGIE</h3></b>
+		<ul>
+		Dépistage VIH 1/2: <input type="text" name="MVIH" value="N/A" size="30" required/></br>
+		</ul>
+		<h3><b>SÉROLOGIE HÉPATITE B</h3></b>
+		<ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTIGENE HBS</font></div>
+		<ul>
+		Index S/CO: <input type="text" name="MSCO" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBS IgG</font></div>
+		<ul>
+		Taux Ac anti-HBs: <input type="text" name="MACHB" value="N/A" size="30" required/></br>
+		</ul>
+		<div style="line-height: 1; width: 1;"><font size="4">ANTICORPS ANTI-HBC Totaux</font></div>
+		<ul>
+		Indice E/VS: <input type="text" name="MEVS" value="N/A" size="30" required/> 
+		</ul>
+		</ul>
+		</ul>
+		<input type="submit" value="Mise à jour" /></br>
+		</form>
+    </div>
+   
+                 
+	
+    
+    
+</div>
+</div>
+
+</body>
+</html>
