@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import sqlite3
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
 app = Flask(__name__)
 
 @app.route("/") 
@@ -99,6 +101,73 @@ def patient():
                     SCO=(donnees[i][j+51])
                     ACHB=(donnees[i][j+52])
                     EVS=(donnees[i][j+53])
+                    font = "Helvetica"
+                    font_size = 26
+                    text = "Hemogramme"
+                    x = 5.4 * inch
+                    y = 11.0 * inch
+                    destination_file = "first.pdf"
+                    my_canvas = canvas.Canvas(destination_file)
+                    my_canvas.setFont(font, font_size)
+                    my_canvas.drawRightString(x, y, text)
+                        
+                        
+                    text1="NUMERATION GLOBULAIRE"
+                    my_canvas.drawRightString(5.0*inch, 10.5*inch, text1)
+                    my_canvas.setFont(font, font_size)
+                        
+                     
+                    my_canvas.drawRightString(3.5*inch, 10.0*inch, "Leucocytes:"+leuco)
+                    my_canvas.setFont(font, font_size)
+                    
+                    my_canvas.drawRightString(3.5*inch, 9.5*inch, "Hématies:"+hemati)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 9.0*inch, "Hémoglobine:"+hemo)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 8.5*inch, "Hématocrite:"+hemato)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 8.0*inch, "V.G.M.:"+vgm)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 7.5*inch, "C.C.M.H.:"+ccmh)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 7.0*inch, "T.C.M.H.:"+tcmh)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 6.5*inch, "R.D.W.:"+rdw)
+                    my_canvas.setFont(font, font_size)
+                        
+                    text2="FORMULE SANGUINE"
+                    my_canvas.drawRightString(4.0*inch, 6.0*inch, text2)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(5.5*inch, 5.5*inch, "Polynucléaires neutrophiles:"+polyn)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(5.5*inch, 5.0*inch, "Polynucléaires éosinophiles:"+polye)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(5.5*inch, 4.5*inch, "Polynucléaires basophiles:"+polyb)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 4.0*inch, "Lymphocytes:"+lymp)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(3.5*inch, 3.5*inch," Monocytes:"+mono)
+                    my_canvas.setFont(font, font_size)
+                        
+                    text3="NUMERATION DES PLAQUETTES"
+                    my_canvas.drawRightString(6.0*inch, 3.0*inch, text3)
+                    my_canvas.setFont(font, font_size)
+                        
+                    my_canvas.drawRightString(5.5*inch, 2.5*inch, "Numération des plaquettes:"+numplaq)
+                    my_canvas.setFont(font, font_size)
+            
+                    my_canvas.save()
                     break;
                     
         i=0
