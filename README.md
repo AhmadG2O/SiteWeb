@@ -7,4 +7,4 @@ Un compte Admin avec pour mot de passe Administration peut créer et modifier (�
 (N'hésitez donc pas à vous créer un compte ;) )
 Un utilisateur peut également modifier ses données mais seulement non médicale!
 Des liens utiles seront à sa disposition en cas de besoin.
-En espérant que la navigation du site vous soit des plus agréables et fluides!
+En espérant que la navigation du site vous soit des plus agréable et fluide!
